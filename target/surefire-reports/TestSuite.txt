@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.861 s - in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 30.646 s <<< FAILURE! - in TestSuite
+getBrowser(com.test.Home)  Time elapsed: 11.038 s  <<< FAILURE!
+java.lang.AssertionError: passed expected [https://www.premierleague.com/matchweek/3296/blog] but found [https://users.premierleague.com/?redirect_uri=https://www.premierleague.com/&app=pl-web]
+	at com.test.Home.getBrowser(Home.java:34)
+

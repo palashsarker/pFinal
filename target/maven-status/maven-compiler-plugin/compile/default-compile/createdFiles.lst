@@ -1,5 +1,6 @@
-com\pageFactory\LandingPage.class
-com\pageFactory\TableList.class
 com\pageFactory\UserAccountCredential.class
 com\base\Base.class
+com\pageFactory\LandingPage.class
+com\pageFactory\TableList.class
+com\pageFactory\UserAccountSignout.class
 com\pageFactory\UserHomePage.class

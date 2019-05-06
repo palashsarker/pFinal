@@ -17,12 +17,12 @@ public class UserAccountCredential {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void emailId() {
-		email.sendKeys("psarker347@gmail.com");
+	public void emailId(String id) {
+		email.sendKeys(id);
 	}
 	
-	public void passWord() {
-		pass.sendKeys("smart12346");
+	public void passWord(String pa) {
+		pass.sendKeys(pa);
 	}
 
 	public void submitButton() {

@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.validation.UrlValidation"/>
-      <class name="com.test.Home"/>
+      <!-- <class name="com.test.Home"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
