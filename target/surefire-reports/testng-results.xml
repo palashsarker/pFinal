@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="1" failed="1" skipped="0">
+<testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-05-06T20:00:11Z" name="Suite" finished-at="2019-05-06T20:00:41Z" duration-ms="29990">
+  <suite started-at="2019-05-07T20:09:09Z" name="Suite" finished-at="2019-05-07T20:09:40Z" duration-ms="30963">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.testRunner.TRunner@185a6e9]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2019-05-06T20:00:11Z" name="Test" finished-at="2019-05-06T20:00:41Z" duration-ms="29990">
-      <class name="com.test.Home">
-        <test-method signature="getBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.test.Home@51399530]" started-at="2019-05-06T13:00:11Z" name="getBrowser" data-provider="getData" finished-at="2019-05-06T13:00:22Z" duration-ms="11034" status="FAIL">
+    <test started-at="2019-05-07T20:09:09Z" name="Test" finished-at="2019-05-07T20:09:40Z" duration-ms="30963">
+      <class name="com.testRunner.TRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.testRunner.TRunner@185a6e9]" started-at="2019-05-07T16:09:09Z" name="setUpClass" finished-at="2019-05-07T16:09:10Z" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.testRunner.TRunner@185a6e9]" started-at="2019-05-07T16:09:10Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-05-07T16:09:40Z" duration-ms="30393" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[wwww]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2222]]>
+                <![CDATA[Fetch current Team Name from default location with user signIn]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[passed expected [https://www.premierleague.com/matchweek/3296/blog] but found [https://users.premierleague.com/?redirect_uri=https://www.premierleague.com/&app=pl-web]]]>
+              <![CDATA[java.lang.AssertionError: passed expected [https://www.premierleague.com/?state=success] but found [https://users.premierleague.com/?redirect_uri=https://www.premierleague.com/&app=pl-web]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: passed expected [https://www.premierleague.com/matchweek/3296/blog] but found [https://users.premierleague.com/?redirect_uri=https://www.premierleague.com/&app=pl-web]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at com.test.Home.getBrowser(Home.java:34)
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.AssertionError: passed expected [https://www.premierleague.com/?state=success] but found [https://users.premierleague.com/?redirect_uri=https://www.premierleague.com/&app=pl-web]
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,29 +58,24 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: passed expected [https://www.premierleague.com/?state=success] but found [https://users.premierleague.com/?redirect_uri=https://www.premierleague.com/&app=pl-web]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at com.stepsDef.StepDef.user_click_submit_button_and_appear_user_account_page_with_validation(StepDef.java:59)
+	at ✽.And user click submit button and appear user account page with validation(C:/Users/palsa/eclipse-workspaceNew/PleagueFinal/src/main/resources/League.feature:10)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBrowser -->
-        <test-method signature="getBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.test.Home@51399530]" started-at="2019-05-06T13:00:23Z" name="getBrowser" data-provider="getData" finished-at="2019-05-06T13:00:41Z" duration-ms="18136" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[psarker347@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[smart12346]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.testRunner.TRunner@185a6e9]" started-at="2019-05-07T16:09:40Z" name="tearDownClass" finished-at="2019-05-07T16:09:40Z" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBrowser -->
-      </class> <!-- com.test.Home -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.testRunner.TRunner -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

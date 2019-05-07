@@ -1,3 +1,5 @@
 com\listeners\Listen.class
 com\test\Home.class
+com\testRunner\TRunner.class
+com\stepsDef\StepDef.class
 com\validation\UrlValidation.class

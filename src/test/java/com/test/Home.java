@@ -3,6 +3,8 @@ package com.test;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -14,13 +16,19 @@ import com.pageFactory.UserAccountSignout;
 import com.pageFactory.UserHomePage;
 
 public class Home extends Base {
-	
-	@Test(dataProvider="getData")
-	public void getBrowser(String id1,String pass1) throws IOException {
+
+	@BeforeMethod
+	public void open() throws IOException {
 		infoBrowser();
 		driver.get(pp.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+
+	}
+
+	@Test(dataProvider = "getData")
+	public void getBrowser(String id1, String pass1) throws IOException {
+
 		LandingPage lp = new LandingPage(driver);
 		lp.cokieOne();
 		lp.signInButton();
@@ -29,9 +37,9 @@ public class Home extends Base {
 		ua.passWord(pass1);
 		ua.submitButton();
 		UserHomePage uh = new UserHomePage(driver);
-		String actual=driver.getCurrentUrl();
+		String actual = driver.getCurrentUrl();
 		System.out.println(actual);
-		Assert.assertEquals(actual, "https://www.premierleague.com/matchweek/3296/blog", "passed");
+		Assert.assertEquals(actual, "https://www.premierleague.com/?state=success", "passed");
 		uh.action();
 		uh.table();
 		TableList tt = new TableList(driver);
@@ -40,20 +48,19 @@ public class Home extends Base {
 		tt.clickUsername();
 		UserAccountSignout us = new UserAccountSignout(driver);
 		us.signOut();
-		
+
 	}
-	
+
+	@AfterMethod
+	public void close() {
+		driver.close();
+
+	}
+
 	@DataProvider
 	public Object[][] getData() {
-		Object [][] info= {{"wwww","2222"},{"psarker347@gmail.com","smart12346"}};
+		Object[][] info = { { "wwww", "2222" }, { "psarker347@gmail.com", "smart12346" } };
 		return info;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
